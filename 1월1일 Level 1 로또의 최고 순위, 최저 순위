@@ -1,0 +1,11 @@
+#로또의 최고 순위와 최저 순위
+https://programmers.co.kr/learn/courses/30/lessons/77484
+
+def solution(lottos, win_nums):
+    ranking = [6,6,5,4,3,2,1]
+    num_0 = lottos.count(0)
+    win_count = len(set(lottos) & set(win_nums))
+    top_ranking = win_count + num_0
+    row_ranking = win_count
+    answer = [ranking[top_ranking],ranking[row_ranking]]
+    return answer
